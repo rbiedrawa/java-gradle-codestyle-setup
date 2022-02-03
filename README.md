@@ -1,38 +1,40 @@
 # Getting Started
 
-## TODO
-
-Intelij idea imports order
-
 ## Usage
 
-1. Run below command to perform spotless
+### Gradle
+
+Use below command to apply spotless code formatting steps
 
 ```shell
 ./gradlew spotlessApply
 ```
 
-## IntelliJ plugin
+### Git pre-commit Hook
 
-A [palantir-java-format IntelliJ plugin](https://plugins.jetbrains.com/plugin/13180)
-is available from the plugin repository. To install it, go to your IDE's settings and select the `Plugins` category.
-Click the `Marketplace` tab, search for the `palantir-java-format` plugin, and click the `Install` button.
+Run `spotlessApply` automatically on every commit.
 
-The plugin will be disabled by default on new projects, but as mentioned [above](#compalantirjava-format-gradle-plugin),
-if using the `com.palantir.java-format` gradle plugin, it will be recommended in IntelliJ, and automatically configured.
+#### Installation
 
-To manually enable it in the current project, go to `File→Settings...→palantir-java-format Settings` (
-or `IntelliJ IDEA→Preferences...→Other Settings→palantir-java-format Settings` on macOS) and check
-the `Enable palantir-java-format` checkbox.
+1. Install pre-commit
+	```shell
+	brew install pre-commit
+	```
+2. Open new terminal and go to [java-gradle-codestyle-setup](./) directory
+3. Install pre-commit hook using [.pre-commit-config.yaml](./.pre-commit-config.yaml)
+	```shell
+	pre-commit install
+	```
 
-To enable it by default in new projects, use `File→Other Settings→Default Settings...`.
+#### Uninstall
 
-When enabled, it will replace the normal `Reformat Code` action, which can be triggered from the `Code` menu or with the
-Ctrl-Alt-L (by default) keyboard shortcut.
+```shell
+rm ./.git/hooks/pre-commit
+```
 
 ## References
 
 * [Spotless gradle plugin](https://github.com/diffplug/spotless/tree/main/plugin-gradle)
+* [Pre-commit](https://pre-commit.com/#usage)
 * [palantir-java-format plugin](https://github.com/palantir/palantir-java-format)
 * [Intelij Palantir Java Format plugin](https://plugins.jetbrains.com/plugin/13180-palantir-java-format/)
-* [Intelij Spotless Gradle plugin](https://plugins.jetbrains.com/plugin/18321-spotless-gradle)

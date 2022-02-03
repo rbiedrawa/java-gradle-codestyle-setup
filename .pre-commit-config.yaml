@@ -1,0 +1,29 @@
+---
+repos:
+  - repo: https://github.com/jguttman94/pre-commit-gradle
+    rev: v0.3.0
+    hooks:
+      - id: gradle-spotless # Lints the project using "gradle spotlessCheck spotlessApply"
+  #      - id: gradle-check # Runs java unit tests using gradle check
+  #  - repo: https://github.com/IamTheFij/docker-pre-commit
+  #    rev: v2.0.1
+  #    hooks:
+  #      - id: docker-compose-check # Checks that docker-compose files are valid
+  #  - repo: https://github.com/APIDevTools/swagger-cli
+  #    rev: v4.0.4
+  #    hooks:
+  #      - id: swagger-validation # Hook to validate swagger specs.
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-executables-have-shebangs
+#      - id: no-commit-to-branch
+#        args: ["--branch", "main"]
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v1.0.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
