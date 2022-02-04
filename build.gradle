@@ -44,11 +44,9 @@ spotless {
 		toggleOffOn()  // enable spotless:off and spotless:on
 		removeUnusedImports()
 		trimTrailingWhitespace()
-		importOrder('java', 'javax', 'com', 'org', '')
-		//		indentWithSpaces 4
-
-		//		googleJavaFormat().aosp()
 		palantirJavaFormat()
+
+		importOrder('\\#', 'com.rbiedrawa', 'java', '')
 	}
 	groovyGradle {
 		target '*.gradle'
