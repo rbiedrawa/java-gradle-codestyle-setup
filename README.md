@@ -1,6 +1,6 @@
-# Code style reference project template for Java / Gradle project
+# Reference project template with code style settings for Java / Gradle projects
 
-This repository contains code style settings that can be used to ensure formatting consistency in Java / Gradle projects.
+This repository contains code style settings that can be used to ensure formatting consistency inside Java / Gradle projects.
 
 Project is configured to use [Palantir](https://github.com/palantir/palantir-java-format) which is based on
 the [Google java format](https://github.com/google/google-java-format). 
