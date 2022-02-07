@@ -11,7 +11,7 @@ the [Google java format](https://github.com/google/google-java-format).
 
 ### Gradle
 
-Use below command to apply spotless code formatting steps
+Use below command to apply `Spotless` code formatting steps
 
 ```shell
 ./gradlew spotlessApply
