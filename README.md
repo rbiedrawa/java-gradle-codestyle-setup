@@ -1,6 +1,6 @@
-# Code style reference setup for Java / Gradle project
+# Code style reference project template for Java / Gradle project
 
-This example contains code style settings that can be used to ensure formatting consistency in Java / Gradle projects.
+This repository contains code style settings that can be used to ensure formatting consistency in Java / Gradle projects.
 
 Project is configured to use [Palantir Java Format](https://github.com/palantir/palantir-java-format) which is based on
 the [google-java-format](https://github.com/google/google-java-format). 
@@ -17,7 +17,7 @@ Use below command to apply spotless code formatting steps
 ./gradlew spotlessApply
 ```
 
-### Git pre-commit Hook
+### Git (pre-commit Hook)
 
 Run `spotlessApply` automatically on every commit.
 
@@ -57,7 +57,7 @@ Ctrl-Alt-L (by default) keyboard shortcut.
 
 #### Caution 
 
-In order to ensure correct import orders and other formatting rules in Intelij custom [codeStyles](./.idea/codeStyles) settings are stored inside this repository, and they will be used automatically.
+Custom [codeStyles](./.idea/codeStyles) settings are stored inside this repository and they will be used automatically, in order to ensure correct import orders and other formatting rules inside Intelij IDE.
 
 ## References
 
