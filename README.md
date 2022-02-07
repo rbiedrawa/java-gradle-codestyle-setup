@@ -2,7 +2,7 @@
 
 This repository contains code style settings that can be used to ensure formatting consistency inside Java / Gradle projects.
 
-Project is configured to use [Palantir](https://github.com/palantir/palantir-java-format) which is based on
+Project is configured to use [Spotless](https://github.com/diffplug/spotless) with [Palantir java format](https://github.com/palantir/palantir-java-format) which is based on
 the [Google java format](https://github.com/google/google-java-format).
 
 # Getting Started
