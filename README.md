@@ -21,7 +21,7 @@ Use below command to apply spotless code formatting steps
 
 Run `spotlessApply` automatically on every commit.
 
-#### Installation
+#### Installation:
 
 1. Install pre-commit
    ```shell
@@ -33,7 +33,7 @@ Run `spotlessApply` automatically on every commit.
    pre-commit install
    ```
 
-#### Uninstall
+#### Uninstall:
 
 ```shell
 rm ./.git/hooks/pre-commit
@@ -41,9 +41,13 @@ rm ./.git/hooks/pre-commit
 
 ### Intelij plugin
 
+#### Installation:
+
 A [palantir-java-format IntelliJ plugin](https://plugins.jetbrains.com/plugin/13180-palantir-java-format/)
 is available from the plugin repository. To install it, go to your IDE's settings and select the `Plugins` category.
 Click the `Marketplace` tab, search for the `palantir-java-format` plugin, and click the `Install` button.
+
+#### Usage:
 
 The plugin will be disabled by default on new projects but if using the `com.palantir.java-format` gradle plugin, it
 will be recommended in IntelliJ, and automatically configured.
@@ -55,7 +59,7 @@ the `Enable palantir-java-format` checkbox.
 When enabled, it will replace the normal `Reformat Code` action, which can be triggered from the `Code` menu or with the
 Ctrl-Alt-L (by default) keyboard shortcut.
 
-#### Caution 
+#### Caution:
 
 Custom [codeStyles](./.idea/codeStyles) settings are stored inside this repository and they will be used automatically, in order to ensure correct import orders and other formatting rules inside Intelij IDE.
 
