@@ -1,0 +1,33 @@
+/* Required plugins in build.gradle:
+plugins {
+	id "com.diffplug.spotless" version "<YOUR_VERSION>"
+}
+*/
+
+spotless {
+	java {
+		target 'src/main/java/**/*.java', 'src/main/test/**/*.java'
+		toggleOffOn()  // enable spotless:off and spotless:on
+		removeUnusedImports()
+
+		palantirJavaFormat()
+
+		importOrder('\\#', 'com.rbiedrawa', 'java', '')
+	}
+	groovyGradle {
+		target '*.gradle'
+		greclipse()
+	}
+	json {
+		target '**/*.json'
+		simple()
+		eclipseWtp('json')
+		targetExclude '.idea/**/*.json', 'out/**/*.json'
+	}
+	format 'misc', {
+		target '**/.gitignore', '**/*.gradle', '**/*.md', '**/*.sh'
+		indentWithTabs()
+		trimTrailingWhitespace()
+		endWithNewline()
+	}
+}

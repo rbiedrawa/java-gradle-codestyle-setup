@@ -3,7 +3,7 @@
 This repository contains code style settings that can be used to ensure formatting consistency inside Java / Gradle projects.
 
 Project is configured to use [Palantir](https://github.com/palantir/palantir-java-format) which is based on
-the [Google java format](https://github.com/google/google-java-format). 
+the [Google java format](https://github.com/google/google-java-format).
 
 # Getting Started
 
@@ -24,14 +24,14 @@ Run `spotlessApply` automatically on every commit.
 #### Installation:
 
 1. Install pre-commit
-   ```shell
-   brew install pre-commit
-   ```
+	```shell
+	brew install pre-commit
+	```
 2. Open new terminal and go to **project** directory
 3. Install pre-commit hook using [.pre-commit-config.yaml](./.pre-commit-config.yaml)
-   ```shell
-   pre-commit install
-   ```
+	```shell
+	pre-commit install
+	```
 
 #### Uninstall:
 

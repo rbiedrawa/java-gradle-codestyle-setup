@@ -1,16 +1,13 @@
-buildscript {
-	dependencies {
-		classpath 'com.diffplug.spotless:spotless-plugin-gradle:5.7.0'
-		classpath 'com.palantir.javaformat:gradle-palantir-java-format:2.17.0'
-	}
-}
-
 plugins {
 	id 'org.springframework.boot' version '2.6.3'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
-	id 'com.diffplug.spotless' version '5.14.0'
+
+	id "com.diffplug.spotless" version "6.2.1"
 }
+
+// Custom configurations:
+apply from: './gradle/spotless.gradle'
 
 group = 'com.rbiedrawa.spotless'
 version = '0.0.1-SNAPSHOT'
@@ -36,32 +33,4 @@ dependencies {
 tasks.named('test') {
 	systemProperty 'spring.profiles.active','test'
 	useJUnitPlatform()
-}
-
-spotless {
-	java {
-		target 'src/main/java/**/*.java', 'src/main/test/**/*.java'
-		toggleOffOn()  // enable spotless:off and spotless:on
-		removeUnusedImports()
-		trimTrailingWhitespace()
-		palantirJavaFormat()
-
-		importOrder('\\#', 'com.rbiedrawa', 'java', '')
-	}
-	groovyGradle {
-		target '*.gradle'
-		greclipse()
-	}
-	json {
-		target '**/*.json'
-		simple()
-		eclipseWtp('json')
-		targetExclude '.idea/**/*.json', 'out/**/*.json'
-	}
-	format 'misc', {
-		target '**/.gitignore', '**/*.gradle', '**/*.md', '**/*.sh'
-		indentWithTabs()
-		trimTrailingWhitespace()
-		endWithNewline()
-	}
 }
