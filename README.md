@@ -2,8 +2,8 @@
 
 This repository contains code style settings that can be used to ensure formatting consistency in Java / Gradle projects.
 
-Project is configured to use [Palantir Java Format](https://github.com/palantir/palantir-java-format) which is based on
-the [google-java-format](https://github.com/google/google-java-format). 
+Project is configured to use [Palantir](https://github.com/palantir/palantir-java-format) which is based on
+the [Google java format](https://github.com/google/google-java-format). 
 
 # Getting Started
 
