@@ -50,7 +50,7 @@ Click the `Marketplace` tab, search for the `palantir-java-format` plugin, and c
 #### Usage:
 
 The plugin will be disabled by default on new projects but if using the `com.palantir.java-format` gradle plugin, it
-will be recommended in IntelliJ, and automatically configured.
+will be recommended in IntelliJ and automatically configured.
 
 To manually enable it in the current project, go to `File→Settings...→palantir-java-format Settings` (
 or `IntelliJ IDEA→Preferences...→Other Settings→palantir-java-format Settings` on macOS) and check
