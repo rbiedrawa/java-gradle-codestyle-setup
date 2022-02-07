@@ -27,7 +27,7 @@ Run `spotlessApply` automatically on every commit.
    ```shell
    brew install pre-commit
    ```
-2. Open new terminal and go to [java-gradle-codestyle-setup](./) directory
+2. Open new terminal and go to **project** directory
 3. Install pre-commit hook using [.pre-commit-config.yaml](./.pre-commit-config.yaml)
    ```shell
    pre-commit install
