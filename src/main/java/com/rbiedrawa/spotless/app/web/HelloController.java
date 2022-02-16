@@ -6,6 +6,8 @@ import java.time.Instant;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import javax.servlet.http.HttpServletRequest;
+
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @GetMapping
-    ResponseEntity<Hello> hello() {
+    ResponseEntity<Hello> hello(HttpServletRequest request) {
         var testCodestyle = Stream.of("aaa", "aabb", "aaa", "ccc")
                 .peek(log::info)
                 .filter("aaa"::equals)

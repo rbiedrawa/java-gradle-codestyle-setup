@@ -10,6 +10,7 @@ import lombok.Value;
 public class Hello {
     Long id;
     String message;
+
     Instant createdDate;
     Instant modifiedDate;
 }
