@@ -69,3 +69,7 @@ Custom [codeStyles](./.idea/codeStyles) settings are stored inside this reposito
 * [Pre-commit](https://pre-commit.com/#usage)
 * [Palantir Java Format plugin](https://github.com/palantir/palantir-java-format)
 * [Intelij Palantir Java Format plugin](https://plugins.jetbrains.com/plugin/13180-palantir-java-format/)
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
